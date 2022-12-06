@@ -12,7 +12,7 @@ pipeline{
 
     agent any
     tools { 
-        gradle 'gradle' 
+        gradle 'gradle7' 
        
     } 
    
@@ -33,7 +33,7 @@ pipeline{
         }
         stage('Clean Build') {
             steps {
-                sh 'gradle clean build'
+                sh 'gradle tasks -all  '
                 echo 'Building..'
             }
         }
